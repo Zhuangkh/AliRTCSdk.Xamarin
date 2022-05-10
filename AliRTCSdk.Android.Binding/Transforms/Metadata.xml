@@ -1,0 +1,14 @@
+﻿<metadata>
+	<!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+
+	<attr path="/api/package[@name='com.alivc.rtc.sys']/class[@name='ClosedInputStream']/field[@name='CLOSED_INPUT_STREAM']" name="managedName">mClosedInputStream</attr>
+	<attr path="/api/package[@name='org.webrtc.ali']/class[@name='EglBase14']/method[@name='getEglBaseContext']" name="managedReturn">Org.Webrtc.Ali.EglBase.Context</attr>
+	<remove-node path="/api/package[@name='com.alivc.rtc.sys']/class[@name='IOUtils']/method[@name='closeQuietly' and count(parameter)=1 and parameter[1][@type='java.io.OutputStream']]" />
+
+</metadata>

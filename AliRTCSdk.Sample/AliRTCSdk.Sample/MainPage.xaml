@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="AliRTCSdk.Sample.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:forms="clr-namespace:AliRTCSdk.Xamarin.Forms;assembly=AliRTCSdk.Xamarin.Forms"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+    <StackLayout>
+        <forms:RTCViewer
+            x:Name="Viewer"
+            HorizontalOptions="FillAndExpand"
+            RenderMode="{Binding SelectRenderMode}"
+            VerticalOptions="FillAndExpand" />
+        <Picker ItemsSource="{Binding AllRenderMode}" SelectedIndex="{Binding SelectRenderMode, Converter={xct:EnumToIntConverter}}" />
+        <Button
+            Command="{Binding PreviewCommand}"
+            CommandParameter="{x:Reference Viewer}"
+            Text="Start Preview" />
+    </StackLayout>
+</ContentPage>
